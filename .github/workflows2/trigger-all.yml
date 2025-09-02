@@ -11,16 +11,13 @@ jobs:
         run: gh workflow list
 
       - name: Lancer workflow 1
-        run: gh workflow run hello-word.yml
-
-      - name: Lancer workflow 2
         run: gh workflow run push.yml
 
       - name: Lancer workflow 2
         run: gh workflow run manual.yml
 
-      - name: Lancer workflow 2
+      - name: Lancer workflow 3
         run: gh workflow run schedule.yml
 
-      - name: Lancer workflow 2
+      - name: Lancer workflow 4
         run: gh workflow run matrix.yml
