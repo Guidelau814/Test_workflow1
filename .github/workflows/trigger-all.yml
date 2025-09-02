@@ -1,0 +1,26 @@
+name: Déclenchement de tous les workflows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger-all:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lister les workflows
+        run: gh workflow list
+
+      - name: Lancer workflow 1
+        run: gh workflow run hello-word.yml
+
+      - name: Lancer workflow 2
+        run: gh workflow run push.yml
+
+      - name: Lancer workflow 2
+        run: gh workflow run manual.yml
+
+      - name: Lancer workflow 2
+        run: gh workflow run schedule.yml
+
+      - name: Lancer workflow 2
+        run: gh workflow run matrix.yml
